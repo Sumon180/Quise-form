@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quise form</title>
+</head>
+<body>
+
+    <form action="">
+        <p>Q1. What is 8+3 = ?<br>
+            <input type="radio">8<br>
+            <input type="radio">7<br>
+            <input type="radio">4<br>
+            <input type="radio" id="q1">11
+        </p>
+        <p>Q2. What is 5-2 = ?<br>
+            <input type="radio">8<br>
+            <input type="radio" id="q2">3<br>
+            <input type="radio">4<br>
+            <input type="radio">2
+        </p>
+        <p>Q3. What is 4+6 = ?<br>
+            <input type="radio" id="q3">10<br>
+            <input type="radio">7<br>
+            <input type="radio">4<br>
+            <input type="radio">2
+        </p>
+
+        <button id="submit">Submit</button>
+    </form>
+
+    <script>
+        
+        let btn = document.getElementById('submit');
+
+        btn.addEventListener('click',() => {
+            let q1 = document.getElementById('q1').checked;
+            let q2 = document.getElementById('q2').checked;
+            let q3 = document.getElementById('q3').checked;
+
+            let count = 0;
+            if(q1){
+                count++;
+            }
+            if(q2){
+                count++;
+            }
+            if(q3){
+                count++;
+            }
+            alert(`Your result ${count}`)
+        });
+
+    </script>
+    
+</body>
+</html>
